@@ -51,6 +51,7 @@
 			<li><a href="News"> 시사 </a></li>
 			<li><a href="Docu"> 다큐 </a></li>
 			<li><a href="board"> 게시판 </a></li>
+			<li><a href = "upload_form"> 업로드 </a></li>
 		</ol>
 	</div>
 </body>
