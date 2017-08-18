@@ -85,6 +85,7 @@ public class MemberDao {
 				mdto.setPwd(rs.getString("pwd"));
 				mdto.setEmail(rs.getString("email"));
 				mdto.setPhone(rs.getString("phone"));
+				mdto.setAdmin(rs.getInt("admin"));
 			}
 		}catch(Exception e){
 			e.printStackTrace();
@@ -137,7 +138,7 @@ public class MemberDao {
 
 	public int insertMember(MemberDto mdto) {
 		int result = -1;
-		String sql = "insert into member values(?, ?, ?, ?, ?)";
+		String sql = "insert into member values(?, ?, ?, ?, ?, ?)";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		try {
@@ -148,6 +149,7 @@ public class MemberDao {
 			pstmt.setString(3, mdto.getPwd());
 			pstmt.setString(4, mdto.getEmail());
 			pstmt.setString(5, mdto.getPhone());
+			pstmt.setInt(6, mdto.getAdmin());
 			result = pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();

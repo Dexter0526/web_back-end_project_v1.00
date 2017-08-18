@@ -7,6 +7,7 @@ public class MemberDto {
 	private String pwd;
 	private String email;
 	private String phone;
+	private int admin;
 	
 	public MemberDto() {
 		// TODO Auto-generated constructor stub
@@ -52,13 +53,23 @@ public class MemberDto {
 		this.phone = phone;
 	}
 
-	public MemberDto(String name, String userid, String pwd, String email, String phone) {
+	
+	public int getAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(int admin) {
+		this.admin = admin;
+	}
+
+	public MemberDto(String name, String userid, String pwd, String email, String phone, int admin) {
 		super();
 		this.name = name;
 		this.userid = userid;
 		this.pwd = pwd;
 		this.email = email;
 		this.phone = phone;
+		this.admin = admin;
 	}
 	
 	

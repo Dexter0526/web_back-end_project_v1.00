@@ -31,6 +31,7 @@ public class MJoinCommand implements MCommand {
 				String pwd = request.getParameter("pwd");
 				String email = request.getParameter("email");
 				String phone = request.getParameter("phone");
+				String admin = "0";
 
 				MemberDto mdto = new MemberDto();
 				mdto.setName(name);
@@ -38,6 +39,7 @@ public class MJoinCommand implements MCommand {
 				mdto.setPwd(pwd);
 				mdto.setEmail(email);
 				mdto.setPhone(phone);
+				mdto.setAdmin(Integer.parseInt(admin));
 
 				MemberDao mdao = MemberDao.getInstance();
 				int result = mdao.insertMember(mdto);
