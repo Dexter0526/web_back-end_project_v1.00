@@ -22,10 +22,22 @@ public class ContentController {
 		Constant.template = this.template;
 	}
 	
-	@RequestMapping("upload_form")
-	public String upload_form(Model model) {
-		System.out.println("upload_form()");
+	@RequestMapping("contentWrite_view")
+	public String contentWrite_view(Model model) {
+		System.out.println("contentWrite_view()");
 		
-		return "Content/upload_form";
+		return "Content/contentWrite_view";
+	}
+	
+	@RequestMapping("contentUpdate")
+	public String contentUpdate() {
+		
+		return null;
+	}
+	
+	@RequestMapping("contentDelete")
+	public String contentDelete() {
+		
+		return null;
 	}
 }
