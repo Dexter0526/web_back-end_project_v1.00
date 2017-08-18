@@ -19,24 +19,24 @@
 			<c:choose>
 
 				<c:when test="${empty loginUser }">
-					<form name="frm" action="login_process" method="post">
+					<form name="frm" action="login" method="post">
 						ID : <input type="text" name="userid">
 						<p>
 							PW : <input type="password" name="pwd">
 						<p>
 							<input type="submit" value="로그인" onclick="return loginCheck()">&nbsp;
 							<input type="reset" value="취소"> &nbsp; <input
-								type="button" value="회원가입" onclick="location.href='join'">
+								type="button" value="회원가입" onclick="location.href='join_view'">
 						<p>
 					</form>
 				</c:when>
 				<c:otherwise>
-					<form action="logout_process">
+					<form action="logout">
 						${loginUser.name}(${loginUser.userid})님
 						<p>
 							<input type="submit" value="로그아웃"> &nbsp; <input
 								type="button" value="회원정보변경"
-								onclick="location.href='memberUpdate?userid=${loginUser.userid}'">
+								onclick="location.href='memberUpdate_view?userid=${loginUser.userid}'">
 					</form>
 				</c:otherwise>
 			</c:choose>
@@ -52,7 +52,7 @@
 			<li><a href="Docu"> 다큐 </a></li>
 			<li><a href="board"> 게시판 </a></li>
 			<c:if test="${loginUser.admin == 1}">
-				<li><a href="upload_form"> 업로드 </a></li>
+				<li><a href="contentWrite_view"> 등록 </a></li>
 			</c:if>
 		</ol>
 	</div>

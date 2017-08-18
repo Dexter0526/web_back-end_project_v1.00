@@ -19,9 +19,9 @@ public class LogController {
 	
 	MCommand command;
 	
-	@RequestMapping("login_process")
+	@RequestMapping("login")
 	public String log_process(HttpServletRequest request, Model model) {
-		System.out.println("login_process()");
+		System.out.println("login()");
 		
 		model.addAttribute("request", request);
 		command = new MLoginCommand();
@@ -30,18 +30,18 @@ public class LogController {
 		return "redirect:Index";
 	}
 	
-	@RequestMapping("join")
+	@RequestMapping("join_view")
 	public String join() {
-		System.out.println("join()");
+		System.out.println("join_view()");
 
 		
-		return "/Log/join";
+		return "/Log/join_view";
 	}
 	
 	
-	@RequestMapping("logout_process")
+	@RequestMapping("logout")
 	public String logout_process(HttpServletRequest request, Model model) {
-		System.out.println("logout_process()");
+		System.out.println("logout()");
 		
 		model.addAttribute("request", request);
 		command = new MLogoutCommand();
@@ -50,9 +50,9 @@ public class LogController {
 		return "redirect:Index";
 	}
 	
-	@RequestMapping("join_process")
+	@RequestMapping("join")
 	public String join_process(HttpServletRequest request, Model model) {
-		System.out.println("join_process()");
+		System.out.println("join()");
 		
 		model.addAttribute("request", request);
 		command = new MJoinCommand();
@@ -80,9 +80,9 @@ public class LogController {
 		return "redirect:idCheck";
 	}
 	
-	@RequestMapping("update_process")
+	@RequestMapping("update")
 	public String update_process(HttpServletRequest request, Model model) {
-		System.out.println("update_process()");
+		System.out.println("update()");
 		model.addAttribute("request", request);
 		command = new MUpdateCommnad();
 		command.execute(model);
@@ -90,11 +90,11 @@ public class LogController {
 		return "redirect:Index";
 	}
 	
-	@RequestMapping("memberUpdate")
+	@RequestMapping("memberUpdate_view")
 	public String memberUpdate() {
-		System.out.println("memberUpdate()");
+		System.out.println("memberUpdate_view()");
 		
-		return "/Log/memberUpdate";
+		return "/Log/memberUpdate_view";
 	}
 	
 }
