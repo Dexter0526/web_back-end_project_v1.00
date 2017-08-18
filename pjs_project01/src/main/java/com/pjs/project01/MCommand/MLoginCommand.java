@@ -7,8 +7,8 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.ui.Model;
 
-import com.pjs.project01.memberdao.MemberDao;
-import com.pjs.project01.memberdto.MemberDto;
+import com.pjs.project01.dao.MemberDao;
+import com.pjs.project01.dto.MemberDto;
 
 public class MLoginCommand implements MCommand {
 

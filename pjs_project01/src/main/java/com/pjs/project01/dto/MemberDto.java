@@ -1,4 +1,4 @@
-package com.pjs.project01.memberdto;
+package com.pjs.project01.dto;
 
 public class MemberDto {
 

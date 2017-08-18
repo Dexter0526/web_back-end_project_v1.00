@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.ui.Model;
 
-import com.pjs.project01.boarddao.BDao;
+import com.pjs.project01.dao.BDao;
 
 public class BModifyCommand implements BCommand {
 

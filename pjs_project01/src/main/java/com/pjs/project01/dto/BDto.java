@@ -1,4 +1,4 @@
-package com.pjs.project01.boarddto;
+package com.pjs.project01.dto;
 
 import java.sql.Timestamp;
 

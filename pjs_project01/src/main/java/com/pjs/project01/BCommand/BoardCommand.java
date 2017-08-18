@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 import org.springframework.ui.Model;
 
-import com.pjs.project01.boarddao.BDao;
-import com.pjs.project01.boarddto.BDto;
+import com.pjs.project01.dao.BDao;
+import com.pjs.project01.dto.BDto;
 
-public class BBoardCommand implements  BCommand{
+public class BoardCommand implements  BCommand{
 
 	@Override
 	public void execute(Model model) {		

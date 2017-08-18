@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.ui.Model;
 
-import com.pjs.project01.memberdao.MemberDao;
+import com.pjs.project01.dao.MemberDao;
 
 public class MIdCheck implements MCommand {
 

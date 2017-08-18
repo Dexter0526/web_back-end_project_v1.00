@@ -9,7 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.pjs.project01.BCommand.BBoardCommand;
+import com.pjs.project01.BCommand.BoardCommand;
 import com.pjs.project01.BCommand.BCommand;
 import com.pjs.project01.BCommand.BContentCommand;
 import com.pjs.project01.BCommand.BDeleteCommand;
@@ -36,7 +36,7 @@ public class BoardController {
 	public String board(Model model) {
 		System.out.println("board()");
 		
-		command = new BBoardCommand();
+		command = new BoardCommand();
 		command.execute(model);
 
 		return "board";

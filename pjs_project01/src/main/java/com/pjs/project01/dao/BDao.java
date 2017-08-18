@@ -1,4 +1,4 @@
-package com.pjs.project01.boarddao;
+package com.pjs.project01.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,7 +12,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.PreparedStatementSetter;
 
-import com.pjs.project01.boarddto.BDto;
+import com.pjs.project01.dto.BDto;
 import com.pjs.project01.util.Constant;
 
 public class BDao {
