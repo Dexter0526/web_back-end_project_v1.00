@@ -1,29 +1,45 @@
 package com.pjs.project01.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.pjs.project01.CCommand.CCommand;
+import com.pjs.project01.CCommand.CListCommand;
 import com.pjs.project01.MCommand.MCommand;
 import com.pjs.project01.MCommand.MIndexCommnad;
+import com.pjs.project01.util.Constant;
 
 @Controller
 public class ViewController {
 	
-	MCommand commnad;
+	MCommand command;
+	CCommand ccommand;
+	public JdbcTemplate template;
+	
+	@Autowired
+	public void setTemplate(JdbcTemplate template) {
+		this.template = template;
+		Constant.template = this.template;
+	}
 
 	@RequestMapping("/Index")
 	public String index(Model model) {
 		System.out.println("Index()");
-		commnad = new MIndexCommnad();
-		commnad.execute(model);
+		command = new MIndexCommnad();
+		command.execute(model);
 				
 		return "Index";
 	}
 	
 	@RequestMapping("/Movie")
-	public String movie() {
+	public String movie(Model model) {
 		System.out.println("Movie()");
+		
+		ccommand = new CListCommand();
+		ccommand.execute(model);
 		
 		return "Movie";
 	}

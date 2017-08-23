@@ -60,15 +60,15 @@ public class BoardController {
 		return "redirect:board";
 	}
 	
-	@RequestMapping("/content_view")
+	@RequestMapping("/board_view")
 	public String content_view(HttpServletRequest request, Model model) {
-		System.out.println("content_view()");
+		System.out.println("board_view()");
 		
 		model.addAttribute("request", request);
 		command = new BContentCommand();
 		command.execute(model);
 
-		return "Board/content_view";
+		return "Board/board_view";
 	}
 	
 	@RequestMapping(method=RequestMethod.POST, value = "/modify")
