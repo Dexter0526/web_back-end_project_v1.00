@@ -18,7 +18,7 @@
 				</tr>
 				<tr>
 					<th>제목</th>
-					<td><input type="text" name="name" size="80"></td>
+					<td><input type="text" name="title" size="80"></td>
 				</tr>
 				<tr>
 					<th>작성자</th>

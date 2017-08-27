@@ -40,7 +40,7 @@ public class ContentController {
 		command = new CWriteCommand();
 		command.execute(model);
 		
-		return "redirect:movie";
+		return "redirect:Movie";
 	}
 	
 	@RequestMapping("contentUpdate_view")
@@ -53,7 +53,7 @@ public class ContentController {
 	public String contentUpdate() {
 		System.out.println("contentUpdate()");
 		
-		return "redirect:movie";
+		return "redirect:Movie";
 	}
 	
 	@RequestMapping("contentDelete")

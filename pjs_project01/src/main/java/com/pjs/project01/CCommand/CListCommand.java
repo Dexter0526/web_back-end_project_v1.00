@@ -16,7 +16,7 @@ public class CListCommand implements CCommand {
 		ContentDao cdao = new ContentDao();
 		ArrayList<ContentDto> dtos = cdao.list();
 		
-		model.addAttribute("list", dtos);
+		model.addAttribute("movieList", dtos);
 	}
 
 }
