@@ -32,8 +32,8 @@
 				<c:forEach items="${list}" var="dto">
 					<tr>
 						<td>${dto.bId}</td>	
-						<td><c:forEach begin="1" end="${dto.bIndent}">-</c:forEach> <a
-							href="board_view?bId=${dto.bId}">${dto.bTitle}</a></td>
+						<td><c:forEach begin="1" end="${dto.bIndent}">-</c:forEach> 
+						<a href="board_view?bId=${dto.bId}">${dto.bTitle}</a></td>
 						<td>${dto.bName}</td>			
 						<td>${dto.bDate}</td>
 						<td>${dto.bHit}</td>

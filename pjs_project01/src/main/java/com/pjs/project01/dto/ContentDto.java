@@ -7,7 +7,14 @@ public class ContentDto {
 	private String userid;
 	private String description;;
 	private String pictureUrl;
+	private int Hit;
 	
+	public int getHit() {
+		return Hit;
+	}
+	public void setHit(int hit) {
+		Hit = hit;
+	}
 	public Integer getCode() {
 		return code;
 	}
@@ -38,13 +45,14 @@ public class ContentDto {
 	public void setPictureUrl(String pictureUrl) {
 		this.pictureUrl = pictureUrl;
 	}
-	public ContentDto(Integer code, String title, String userid, String description, String pictureUrl) {
+	public ContentDto(Integer code, String title, String userid, String description, String pictureUrl, Integer Hit) {
 		super();
 		this.code = code;
 		this.title = title;
 		this.userid = userid;
 		this.description = description;
 		this.pictureUrl = pictureUrl;
+		this.Hit = Hit;
 	}
 	
 	public ContentDto() {

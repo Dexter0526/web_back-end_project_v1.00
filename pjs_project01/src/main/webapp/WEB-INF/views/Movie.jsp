@@ -29,15 +29,11 @@
 					<c:forEach var="movie" items="${movieList }">
 						<tr class="record">
 							<td align = "center">${movie.code }</td>
-							<td>${movie.title }</td>
+							<td><a href = "content_view?code=${movie.code}">${movie.title }</a></td>
 							<td align = "center">${movie.userid }</td>
 						</tr>
 					</c:forEach>
 				</table>
-				<c:if test="${loginUser.admin == 1}">
-					<a href="contentUpdate_view?code=${movie.code }">수정</a> &nbsp;
-					<a href="contentDelete?code=${movie.code }">삭제</a>
-				</c:if>
 			</div>
 		</div>
 
