@@ -7,8 +7,12 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.pjs.project01.CCommand.CCommand;
+import com.pjs.project01.CCommand.CDeleteCommand;
+import com.pjs.project01.CCommand.CDetailCommand;
+import com.pjs.project01.CCommand.CUpdateCommand;
 import com.pjs.project01.CCommand.CWriteCommand;
 import com.pjs.project01.util.Constant;
 
@@ -43,30 +47,35 @@ public class ContentController {
 		return "redirect:Movie";
 	}
 	
-	@RequestMapping("contentUpdate_view")
-	public String contentUpdate_view(Model model) {
-		System.out.println("contentUpdate_view()");
+	@RequestMapping("content_view")
+	public String content_view(HttpServletRequest request, Model model) {
+		System.out.println("content_view()");
 		
-		return "Content/contentUpdate_view";
+		model.addAttribute("request", request);
+		command = new CDetailCommand();
+		command.execute(model);
+		
+		return "Content/content_view";
 	}
-	@RequestMapping("contentUpdate")
-	public String contentUpdate() {
+	@RequestMapping(method=RequestMethod.POST, value = "contentUpdate")
+	public String contentUpdate(HttpServletRequest request, Model model) {
 		System.out.println("contentUpdate()");
+		
+		model.addAttribute("request", request);
+		command = new CUpdateCommand();
+		command.execute(model);
 		
 		return "redirect:Movie";
 	}
 	
 	@RequestMapping("contentDelete")
-	public String contentDelete() {
+	public String contentDelete(HttpServletRequest request, Model model) {
 		System.out.println("contentDelete()");
 		
-		return null;
-	}
-	
-	@RequestMapping("contentList")
-	public String contentList() {
-		System.out.println("contentList()");
+		model.addAttribute("request", request);
+		command = new CDeleteCommand();
+		command.execute(model);
 		
-		return null;
+		return "redirect:Movie";
 	}
 }
