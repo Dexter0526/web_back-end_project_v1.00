@@ -12,7 +12,7 @@
 <body>
 	<center>
 		<h2>회원 수정</h2>
-		<form name="frm" action="update_process" method="post">
+		<form name="frm" action="update" method="post">
 			<table>
 				<tr>
 					<td>이름</td>
@@ -39,7 +39,7 @@
 						value="${loginUser.email}"></td>
 				</tr>
 				<tr>
-					<td>젂화번호</td>
+					<td>전화번호</td>
 					<td><input type="text" name="phone" size="20"
 						value="${loginUser.phone}"></td>
 				</tr>

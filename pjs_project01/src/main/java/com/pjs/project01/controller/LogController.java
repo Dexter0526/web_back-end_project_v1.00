@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.pjs.project01.MCommand.MLoginCommand;
 import com.pjs.project01.MCommand.MLogoutCommand;
 import com.pjs.project01.MCommand.MUpdateCommnad;
+import com.pjs.project01.HCommand.HCommand;
+import com.pjs.project01.HCommand.HJoinCommand;
 import com.pjs.project01.MCommand.MCommand;
 import com.pjs.project01.MCommand.MIdCheck;
 import com.pjs.project01.MCommand.MJoinCommand;
@@ -18,6 +20,7 @@ import com.pjs.project01.MCommand.MJoinCommand;
 public class LogController {
 	
 	MCommand command;
+	HCommand hcommand;
 	
 	@RequestMapping("login")
 	public String log_process(HttpServletRequest request, Model model) {
@@ -57,6 +60,9 @@ public class LogController {
 		model.addAttribute("request", request);
 		command = new MJoinCommand();
 		command.execute(model);
+		
+		hcommand = new HJoinCommand();
+		hcommand.execute(model);
 		
 		return "redirect:Index";
 	}

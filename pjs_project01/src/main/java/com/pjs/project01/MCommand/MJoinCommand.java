@@ -40,8 +40,9 @@ public class MJoinCommand implements MCommand {
 				mdto.setEmail(email);
 				mdto.setPhone(phone);
 				mdto.setAdmin(Integer.parseInt(admin));
-
+				
 				MemberDao mdao = MemberDao.getInstance();
+				
 				int result = mdao.insertMember(mdto);
 
 				if(result ==1){
@@ -54,6 +55,8 @@ public class MJoinCommand implements MCommand {
 				e.printStackTrace();
 			}
 		}
+		
+		
 		System.out.println("회원가입 정상가동");
 	}
 

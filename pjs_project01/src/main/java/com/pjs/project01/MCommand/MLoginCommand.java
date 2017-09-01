@@ -29,6 +29,7 @@ public class MLoginCommand implements MCommand {
 		
 		if(result == 1) {
 			MemberDto mdto = mdao.getMember(userid);
+			mdto.setUserid(userid);
 
 			session2.setAttribute("loginUser", mdto);
 			session2.setAttribute("message", "회원님 안녕하세요.");
@@ -38,5 +39,5 @@ public class MLoginCommand implements MCommand {
 			session2.setAttribute("message", "회원이 존재하지 않습니다.");
 		}
 	}
-
+	
 }

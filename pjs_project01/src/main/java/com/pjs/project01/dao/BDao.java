@@ -57,11 +57,13 @@ public class BDao {
 
 		upHit(strID);
 		String query = "select * from mvc_board where bId = " + strID;
+		System.out.println(query);
 		return template.queryForObject(query, new BeanPropertyRowMapper<BDto>(BDto.class));
 	}
 
 	public void upHit(final String bId) {
 		String query = "update mvc_board set bHit = bHit + 1 where bId = ?";
+		System.out.println(query);
 		template.update(query, new PreparedStatementSetter() {
 
 			@Override

@@ -1,4 +1,3 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -6,15 +5,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel ="stylesheet" type = "text/css" href = "${pageContext.request.contextPath}/resources/css/main.css">
-<title>Header 페이지</title>
+<title>Footer 페이지</title>
 </head>
 <body>
-<header class = "top">
+<center>
 
-			<a href = "Index?userid = ${loginUser.userid} "> <h1 align = "center">JS Contents</h1></a>
+<footer>
+	<p>
+	<font size = 3>
+		All contents Copyright JS Park all rights reserved <br>
+	</font>
+</footer>
 
-	<br>
-</header>
-
+</center>
 </body>
 </html>

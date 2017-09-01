@@ -35,8 +35,7 @@
 						${loginUser.name}(${loginUser.userid})님
 						<p>
 							<input type="submit" value="로그아웃"> &nbsp; <input
-								type="button" value="회원정보변경"
-								onclick="location.href='memberUpdate_view?userid=${loginUser.userid}'">
+								type="button" value="회원정보변경" onclick="location.href='memberUpdate_view?userid=${loginUser.userid}'">
 					</form>
 				</c:otherwise>
 			</c:choose>
@@ -46,11 +45,11 @@
 
 		<center class="top">카테고리</center>
 		<ol class="top">
-			<li><a href="Movie">영화 </a></li>
-			<li><a href="Variety"> 예능 </a></li>
-			<li><a href="News"> 시사 </a></li>
-			<li><a href="Docu"> 다큐 </a></li>
-			<li><a href="board"> 게시판 </a></li>
+			<li><a href="Movie?userid = ${loginUser.userid }">영화 </a></li>
+			<li><a href="Variety?userid = ${loginUser.userid }"> 예능 </a></li>
+			<li><a href="News?userid = ${loginUser.userid }"> 시사 </a></li>
+			<li><a href="Docu?userid = ${loginUser.userid }"> 다큐 </a></li>
+			<li><a href="board?userid = ${loginUser.userid }"> 게시판 </a></li>
 			<c:if test="${loginUser.admin == 1}">
 				<li><a href="contentWrite_view"> 등록 </a></li>
 			</c:if>
